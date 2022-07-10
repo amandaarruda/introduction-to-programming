@@ -13,26 +13,27 @@ distancia3 = float(input())
 
 #Definindo a nota mais alta
 if (nota1 > nota2 and nota1 > nota3):
-    melhor_cidade = cidade1
+    Nome_Cidade = cidade1
     melhor_nota = nota1
 elif (nota2 > nota3):
-    melhor_cidade = cidade2
+    Nome_Cidade = cidade2
     melhor_nota = nota2
 elif (nota1 == nota2 or nota1 == nota3 or nota3 == nota2):
     if (distancia1 < distancia2 and distancia1 < distancia3):
-        melhor_cidade = cidade1
+        Nome_Cidade = cidade1
         melhor_nota = nota1
     elif (distancia2 < distancia3):
-        melhor_cidade = cidade2
+        Nome_Cidade = cidade2
         melhor_nota = nota2
     else:
-        melhor_cidade = cidade3
+        Nome_Cidade = cidade3
+        melhor_nota = nota3
 else:
-    melhor_cidade = cidade3
+    Nome_Cidade = cidade3
     melhor_nota = nota3
 
 #Resultados
 if (4 <= melhor_nota <= 5):
-    print('melhor_cidade')
+    print(Nome_Cidade)
 else:
     print('Nota mínima não atingida')
