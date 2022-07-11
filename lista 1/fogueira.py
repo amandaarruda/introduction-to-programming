@@ -89,21 +89,21 @@ elif (pontuacao_1 == pontuacao_2 == pontuacao_3):
         pontuacao_segundo = pontuacao_3
         nome_segundo = nome_3
 elif (pontuacao_1 == pontuacao_2 and pontuacao_1 > pontuacao_3):
-    if (pontuacao_1 < pontuacao_2):
+    if (nome_1 < nome_2):
         pontuacao_segundo = pontuacao_1
         nome_segundo = nome_1
     else:
         pontuacao_segundo = pontuacao_2
         nome_segundo = nome_2
 elif (pontuacao_2 == pontuacao_3 and pontuacao_2 > pontuacao_1):
-    if (pontuacao_2 < pontuacao_3):
+    if (nome_2 < nome_3):
         pontuacao_segundo = pontuacao_2
         nome_segundo = nome_2
     else:
         pontuacao_segundo = pontuacao_3
         nome_segundo = nome_3
 elif (pontuacao_1 == pontuacao_3 and pontuacao_1 > pontuacao_2):
-    if (pontuacao_1 < pontuacao_3):
+    if (nome_1 < nome_3):
         pontuacao_segundo = pontuacao_1
         nome_segundo = nome_1
     else:
