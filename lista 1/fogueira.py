@@ -153,6 +153,4 @@ else:
     pontuacao_terceiro = pontuacao_3
 
 #Resultados
-print(nome_primeiro, pontuacao_primeiro)
-print(nome_segundo, pontuacao_segundo)
-print(nome_terceiro, pontuacao_terceiro)
+print(f'{nome_primeiro}, {pontuacao_primeiro}, \n, {nome_segundo}, {pontuacao_segundo}, \n, {nome_terceiro}, {pontuacao_terceiro}')
