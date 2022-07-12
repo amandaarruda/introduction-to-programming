@@ -14,7 +14,7 @@ if (pontuacao_1 < pontuacao_2 and pontuacao_1 < pontuacao_3):
 elif (pontuacao_2 < pontuacao_3 and pontuacao_2 < pontuacao_1):
     nome_primeiro = nome_2
     pontuacao_primeiro = pontuacao_2
-elif (pontuacao_1 == pontuacao_2 and pontuacao_1 == pontuacao_3):
+elif (pontuacao_1 == pontuacao_2 == pontuacao_3):
     if (nome_1 < nome_2 and nome_1 < nome_3):
         nome_primeiro = nome_1
         pontuacao_primeiro = pontuacao_1
@@ -56,7 +56,7 @@ if (pontuacao_1 > pontuacao_2 and pontuacao_1 > pontuacao_3):
 elif (pontuacao_2 > pontuacao_3 and pontuacao_2 > pontuacao_1):
     nome_terceiro = nome_2
     pontuacao_terceiro = pontuacao_2
-elif (pontuacao_1 == pontuacao_2 and pontuacao_1 == pontuacao_3):
+elif (pontuacao_1 == pontuacao_2 == pontuacao_3):
     if (nome_1 > nome_2 and nome_1 > nome_3):
         nome_terceiro = nome_1
         pontuacao_terceiro = pontuacao_1
@@ -102,7 +102,7 @@ elif (nome_3 != nome_primeiro and nome_3 != nome_terceiro):
     pontuacao_segundo = pontuacao_3
     nome_segundo = nome_3
 else:
-    if (nome_1 == nome_2 and nome_1 == nome_3):
+    if (nome_1 == nome_2 == nome_3):
         if (pontuacao_1 != pontuacao_primeiro and pontuacao_1 != pontuacao_terceiro):
             pontuacao_segundo = pontuacao_1
             nome_segundo = nome_1
