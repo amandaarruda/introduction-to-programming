@@ -153,4 +153,4 @@ else:
     pontuacao_terceiro = pontuacao_3
 
 #Resultados
-print(f'{nome_primeiro}{pontuacao_primeiro}\n{nome_segundo}{pontuacao_segundo}\n{nome_terceiro}{pontuacao_terceiro}')
+print(f'{nome_primeiro} {pontuacao_primeiro}\n{nome_segundo} {pontuacao_segundo}\n{nome_terceiro} {pontuacao_terceiro}')
