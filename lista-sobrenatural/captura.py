@@ -14,7 +14,7 @@ while (len(suspeitos) != 1):
         suspeitos.pop(-1)
     elif (pista == 'Procurei por um elemento um pouco mais além na lista e ele está acima de qualquer suspeita'):
         if (len(suspeitos) % 2 != 0):
-            mediana = int((len(suspeitos)+1)/2)
+            mediana = int((len(suspeitos)-1)/2)
             suspeitos.pop(mediana)
         else:
             mediana = int(((len(suspeitos))/2))
