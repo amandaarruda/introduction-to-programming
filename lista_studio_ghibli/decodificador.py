@@ -1,9 +1,4 @@
-elementos_ascii = []
-mensagem_decodificada = []
-indecodificavel = False
-mensagem_codificada = input().split(' ')
-
-def decodificador(mensagem):
+def decodificador(mensagem): # a função transforma o número pro correspondente ascii
     if (0 <= int(mensagem) < 26):
         valor_ascii = int(mensagem) + 97
     elif (26 <= int(mensagem) < 50):
@@ -15,18 +10,21 @@ def decodificador(mensagem):
     elif (int(mensagem) == 100):
         valor_ascii = 32
     else:
-        indecodificavel = True
-    if not indecodificavel:
-        elementos_ascii.append(valor_ascii)
+        valor_ascii = 33 #O valor 33 serve apenas para sinalizar que o código não diz nada, já que não deveria ser considerado
+    elementos_ascii.append(valor_ascii)
+
+elementos_ascii = [] #armazena os valores convertidos
+mensagem_decodificada = [] #armazena os caracteres convertidos
+mensagem_codificada = input().split(' ') #recebe os números originais
 
 for mensagem in mensagem_codificada:
     decodificador(mensagem)
 
 for elemento in elementos_ascii:
-    caractere = chr(elemento)
+    caractere = chr(elemento) #converte
     mensagem_decodificada.append(caractere)
 
-if (not indecodificavel):
+if (33 not in elementos_ascii):
     mensagem_final = ('').join(mensagem_decodificada)
     print(mensagem_final)
 else:
