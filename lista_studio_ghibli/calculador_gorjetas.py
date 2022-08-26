@@ -4,7 +4,7 @@ def pedras_quentes(valores):
     valores[1] += 20 #atualiza o tempo decorrido
 
 def massagem_pes(valores):
-    if (valores[2] % 10 == 0): #muda a gorjeta
+    if (valores[2] % 2 == 0): #muda a gorjeta
         valores[2] += ((valores[2] % 7) * 6)
     else:
         valores[2] += ((valores[2] % 7)**2)
@@ -34,6 +34,7 @@ servico_inexistente = False
 
 while (valores[0] > 0 and valores[2] < 50):
     servico = input()
+    servico_inexistente = False
     if (servico == 'pedras'):
         pedras_quentes(valores)
         nome_servico = 'Pedras Quentes'
@@ -48,7 +49,7 @@ while (valores[0] > 0 and valores[2] < 50):
         nome_servico = 'Massagem Completa'
     else:
         servico_inexistente = True
-        valores[0] -= 5 #subtrai do tempo print('Voce nao conseguiu o minimo necessario para comprar a passagem de saida desse mundo e salvar seus pais.')total
+        valores[0] -= 5 #subtrai do tempo
         valores[1] += 5 #atualiza o tempo decorrido
         print(f'O cliente fez voce perder tempo, voce ainda possui {valores[2]} gorjetas.')
 
