@@ -14,9 +14,9 @@ def mod_letra(posicao): #o mod da letra é o resto da sua posição por 11
     return mod
 
 def fatorial(mod): #a posição fatorial é a posição obtida pela letra - 1
-    if (mod) > 1:
+    if (mod > 1):
         return (mod) * fatorial(mod - 1)
-    else:
+    elif (mod >= 0):
         return 1
 
 def fibonacci(mod):
@@ -32,6 +32,7 @@ senha_final = []
 senhas_finais = []
 numeros_sem_conversao = []
 pedaco_convertido = []
+existe_senha = False
 
 senha = input()
 quantidade = int(input())
@@ -41,12 +42,12 @@ for palavras in range(quantidade):
         letra_numero(letra) #transformo a letra em numero
         mod_letra(posicao) #tiro o mod da posição da letra
 
-        for i in range(mod + 1): #crio a lista de fibonacci e a de fatorial de acordo com o mod
+        for i in range(mod): #crio a lista de fibonacci e a de fatorial de acordo com o mod
             lista_fibonacci.append(fibonacci(i))
-            lista_fatorial.append(fatorial(i - 1))
+            lista_fatorial.append(fatorial(i))
 
         if mod == 0:
-            senha.append['1']
+            senha_final.append('1')
         elif mod % 2 != 0:
             for x in range(len(lista_fibonacci)):
                 numeros_sem_conversao.append(lista_fibonacci[x] * lista_fatorial[x]) #multiplicando os valores das listas
@@ -55,9 +56,20 @@ for palavras in range(quantidade):
                 numeros_sem_conversao.append(lista_fibonacci[x] + lista_fatorial[x]) #somando os valores das listas
 
         for valor in numeros_sem_conversao:
-            pedaco_convertido.append(numero_letra(valor)) #criando um pedaço pra cada letra
+            pedaco_convertido.append(numero_letra(valor % 26)) #criando um pedaço pra cada letra
         senha_final.append(('').join(pedaco_convertido)) #junto o resultado de uma letra para criar uma n-upla com o resultado de todas
 
         lista_fatorial = [] #limpo as listas para uma nova iteração
         lista_fibonacci = []
+        pedaco_convertido = []
+        numeros_sem_conversao = []
     senhas_finais.append(('').join(senha_final)) #junto o resultado da palavra
+    if senhas_finais[0] == senha:
+        existe_senha = True
+    senha_final = [] #limpo as senhas
+    senhas_finais = []
+
+if existe_senha:
+    print('Achamos! Achamos a senha.')
+else:
+    print('É... Temos que procurar mais.')
